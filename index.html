@@ -10,6 +10,10 @@
     <link rel="icon" href="./assets/favicon.png">
   </head>
   <body>
+    <audio autoplay loop>
+      <source src="assets/bgm.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <nav id="desktop-nav">
       <div class="logo">AkbrrID</div>
       <div>
@@ -19,6 +23,22 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">AkbrrID</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
       </div>
     </nav>
     <section id="profile">
@@ -276,7 +296,7 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.canva.com/design/DAFrIzNB4V8/bIk9vNLF17PQpTN2HGYQ6Q/edit'"
+                onclick="location.href='https://www.canva.com/design/DAFrIzNB4V8/bIk9vNLF17PQpTN2HGYQ6Q/edit?utm_content=DAFrIzNB4V8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'"
               >
                 Canva
             </div>
@@ -284,11 +304,9 @@
         </div>
       </div>
     </section>
-    <br> <br> <br />
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <br> <br />
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
