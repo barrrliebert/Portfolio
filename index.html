@@ -19,10 +19,6 @@
     </style>
   </head>
   <body>
-    <audio autoplay loop>
-      <source src="assets/bgm.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
     <nav id="desktop-nav">
       <a href="https://www.instagram.com/elronditshere/">
       <div class="logo">AkbrrID</div>
@@ -63,6 +59,19 @@
         <h1 class="title">Akbar Tolib Ramadan</h1>
         <p class="section__text__p2">Editor & Designer</p>
         <div class="btn-container">
+          <audio id="myAudio" src="./assets/bgm.mp3"></audio>
+          <button class="btn btn-color-2" onclick="togglePlayPause()">Play Music</button>         
+          <script>
+            var audio = document.getElementById("myAudio");
+          
+            function togglePlayPause() {
+              if (audio.paused) {
+                audio.play();
+              } else {
+                audio.pause();
+              }
+            }
+          </script>    
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
