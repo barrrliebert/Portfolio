@@ -56,6 +56,10 @@ a:hover {
   font-size: 2rem;
 }
 
+.logo:hover {
+  cursor: default;
+}
+
 /* Hamburger-nav */
 #hamburger-nav {
   display: none;
