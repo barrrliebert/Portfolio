@@ -1,29 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" href="./assets/favicon.png">
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      ::selection {
-        color: white;
-        background: black;
-      }
-    </style>
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <a href="https://www.instagram.com/kyzeeeu_/">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="icon" href="./assets/favicon.png">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::selection {
+      color: white;
+      background: black;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <a href="https://www.instagram.com/kyzeeeu_/">
       <div class="logo">AkbrrID</div>
-      </a>
-      <div>
+    </a>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <a href="https://www.instagram.com/elronditshere/">
+      <div class="logo">AkbrrID</div>
+    </a>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/Gallery.png" alt="Profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Akbar Tolib Ramadan</h1>
+      <p class="section__text__p2">UI/UX & Frontend</p>
+      <div class="btn-container">
+        <audio id="myAudio" src="./assets/bgm.mp3"></audio>
+        <button class="btn btn-color-2" onclick="togglePlayPause()">Play Music</button>
+        <script>
+          var audio = document.getElementById("myAudio");
+
+          function togglePlayPause() {
+            if (audio.paused) {
+              audio.play();
+            } else {
+              audio.pause();
+            }
+          }
+        </script>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/akbar-t-ramadan-186b2b25a/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/barrrliebert'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Vocational School & Freelancer</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Student at <br />SMKN4 Bogor</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Currently pursuing education at SMKN 4 Bogor major
+            Software Development and Games, I am concurrently
+            a member of a freelance team ND3V, specializing in
+            Therefore, with these reasons, I am applying to your
+            company. I wish to contribute the skills I have
+            acquired during
+            .”
+            Front-end development and UI/UX sometimes Fullstack.
+            my two years of experience in frontend and UI/UX.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>NodeJS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Tailwind</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React & NextJS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Editing & Design</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Figma</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Canva</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Lightroom</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Premier Pro</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/dicoding.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">BookshelfAPI (Final Project)</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/barrrliebert/bookselfAPI'">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/860px-Google_Drive_icon_%282020%29.svg.png"
+              alt="" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">E-Sertification</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://drive.google.com/drive/folders/19tMnOBxu6nlZX8P-A2xDU-OhqikP21Wu?usp=drive_link'">
+              Google Drive
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="data:image/png;base64,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"
+              alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Movie Website Info (SMKDEV FINAL PROJECT) </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/barrrliebert/movie-web'">
+              Github
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+              alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">RMI (Fullstack) </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://demo.aisma.co.id/'">
+              Website
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="https://i.ytimg.com/vi/rex8RRK0ZjQ/maxresdefault.jpg" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">AISMA Company Profile (Frontend & UI/UX)</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://aisma.co.id/'">
+              Website
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">And more in my github Repo!!!</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/barrrliebert?tab=repositories'">
+              Website
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:examplemail@gmail.com">akbartolieb@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/akbar-t-ramadan-186b2b25a/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -32,335 +316,9 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <a href="https://www.instagram.com/elronditshere/">
-      <div class="logo">AkbrrID</div>
-      </a>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/Gallery.png" alt="Profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Akbar Tolib Ramadan</h1>
-        <p class="section__text__p2">Editor & Designer</p>
-        <div class="btn-container">
-          <audio id="myAudio" src="./assets/bgm.mp3"></audio>
-          <button class="btn btn-color-2" onclick="togglePlayPause()">Play Music</button>         
-          <script>
-            var audio = document.getElementById("myAudio");
-          
-            function togglePlayPause() {
-              if (audio.paused) {
-                audio.play();
-              } else {
-                audio.pause();
-              }
-            }
-          </script>    
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/akbar-t-ramadan-186b2b25a/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/barrrliebert'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1+ years <br />Vocational School</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Student at <br />SMKN4 Bogor</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Editing & Design</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Figma</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Canva</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Lightroom</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Premier Pro</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/dicoding.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">BookshelfAPI (Final Project)</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/barrrliebert/bookselfAPI'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./.png"
-                alt=""
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">E-Sertification</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://drive.google.com/drive/folders/19tMnOBxu6nlZX8P-A2xDU-OhqikP21Wu?usp=drive_link'"
-              >
-                Google Drive
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="https://www.smk.dev/wp-content/uploads/icon.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Movie Website Info (SMKDEV FINAL PROJECT) </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/barrrliebert/movie-web'"
-              >
-                Github
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">akbartolieb@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/akbar-t-ramadan-186b2b25a/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 AkbrrID. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    <p>Copyright &#169; 2023 AkbrrID. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
